@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>File Downloader Paper 3</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fdfbfb, #ebedee);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .dark-mode {
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 100%;
+      max-width: 700px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .dark-mode .container {
+      background: #2c2c2c;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2.8rem;
+    }
+
+    .divider {
+      height: 4px;
+      width: 80px;
+      margin: 10px auto 30px;
+      background: linear-gradient(to right, #007bff, #00d4ff);
+      border-radius: 50px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f1f3f5;
+      padding: 14px 20px;
+      border-radius: 12px;
+      transition: background 0.3s;
+    }
+
+    .dark-mode li {
+      background: #3a3a3a;
+    }
+
+    li:hover {
+      background: #e2e6ea;
+    }
+
+    a.download-link {
+      color: white;
+      background: linear-gradient(to right, #007bff, #00bfff);
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    a.download-link:hover {
+      background: linear-gradient(to right, #0056b3, #00aaff);
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 1.3rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .dark-mode footer {
+      color: #aaa;
+    }
+
+    .toggle-theme {
+      display: block;
+      margin: 0 auto 25px;
+      padding: 8px 18px;
+      font-weight: bold;
+      background: #343a40;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle-theme:hover {
+      background: #212529;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      a.download-link {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📂 File Downloader</h1>
+    <div class="divider"></div>
+
+    <button class="toggle-theme" onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+    <h2>Excel Guide 1 ❤️</h2>
+    <ul>
+      <li>
+        <span class="icon">✅ Sample PDF</span>
+        <a class="download-link" href="PDF/Excel Guide 1 QP.pdf" download>Download PDF</a>
+      </li>
+      <li>
+        <span class="icon">✅ Project ZIP</span>
+        <a class="download-link" href="ZIP/Excel Guide 1.zip" download>Download ZIP</a>
+      </li>
+      <li>
+        <span class="icon">✅ Mark Scheme</span>
+        <a class="download-link" href="" download>Download MS</a>
+      </li>
+    </ul>
+<!--  -->
+<br>
+<!--  -->
+    <h2>Excel Guide 2 ❤️</h2>
+    <ul>
+        <li>
+          <span class="icon">✅ Sample PDF</span>
+          <a class="download-link" href="PDF/Excel Guide 2 QP.pdf" download>Download PDF</a>
+        </li>
+        <li>
+          <span class="icon">✅ Project ZIP</span>
+          <a class="download-link" href="ZIP/Excel Guide 2.zip" download>Download ZIP</a>
+        </li>
+        <li>
+          <span class="icon">✅ Mark Scheme</span>
+          <a class="download-link" href="" download>Download MS</a>
+        </li>
+      </ul>
+
+<!--  -->
+<br>
+<!--  -->
+    <h2>Excel Guide 3 ❤️</h2>
+    <ul>
+        <li>
+          <span class="icon">✅ Sample PDF</span>
+          <a class="download-link" href="PDF/Excel Guide 3 QP.pdf" download>Download PDF</a>
+        </li>
+        <li>
+          <span class="icon">✅ Project ZIP</span>
+          <a class="download-link" href="ZIP/Excel Guide 3.zip" download>Download ZIP</a>
+        </li>
+        <li>
+          <span class="icon">✅ Mark Scheme</span>
+          <a class="download-link" href="#" download>Download MS</a>
+        </li>
+      </ul>
+<br>
+      <a class="download-link" href="File Downloader 1.html" download>Back</a>
+    <footer>
+      Made with ❤️ by You &middot; <a href="#">(Back to Top)</a>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
